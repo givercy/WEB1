@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 02 - listas, formularios e tabelas</title>
+</head>
+<body>
+    <h1>
+        listas, tabelas, formularios
+    </h1>
+    <hr>
+    <p>
+        Nesta pagina serao apresentados exemmplos de listas, tabelas e formularios
+    </p>
+    
+    <h2>Lista nao ordenada</h2>
+    <ul> <!--Cria uma lista nao ordenada-->
+        <li>maca</li> <!--Item da lista-->
+        <li>banana</li>
+        <li>pera</li>
+    </ul> <!--Encerra a lista nao ordenada-->
+    
+    <h2>Lista ordenada</h2> <!--Texto um pouco menor que na tag h1-->
+    <ol> <!--Lista ordenada-->
+        <li>joelho</li> 
+        <li>cabeca</li>
+        <li>ombro</li>
+        <li>pe</li>
+    </ol>
+    
+    <h2>Lista descritiva</h2>
+    <dl> <!--Lista descritiva-->
+        <dt>Carro:</dt> <!--Titulo-->
+        <dd>Veiculo de quatro rodas</dd> <!--descricao-->
+        <dt>moto:</dt>
+        <dd>de quatro rodas</dd>
+    </dl>
+    
+    <h2>Tabela</h2>
+    <table border="1"> <!--border cria as bordas das table-->
+        <tr> <!--linha nova-->
+            <th>Faixa</th> <!--cabeçalho da coluna-->
+            <th>Valor</th>
+        </tr>
+        <tr>
+            <td>branca</td><!--dados-->
+            <td>R$100</td>
+        </tr>
+        <tr>
+            <td>amarela</td>
+            <td>R$120</td>
+        </tr>
+        <tr>
+            <td>vermelha</td>
+            <td>R$150</td>
+        </tr>
+    </table>
+    <hr>
+
+    <h2>
+        formulario
+    </h2>
+    <form action="x" method="post"> <!--define formulario e os pricipais atributos-->
+        
+        <label for="nome">Nome:</label> <!--Associa um texto descritivo a um campo de formulario-->
+        <input type="text" id="nome" name="nome" required> <br><br> <!--Campo de caixa de entrada que pode ter varios tipos como name, email, passoword e submmit-->
+        
+        <label for="email">E-mail:</label>
+        <input type="emial" id="email" name="email" required> <br><br>
+
+        <label for="password">Senha:</label>
+        <input type="password" id="senha" name="senha"> <br><br>
+
+        <input type="submit" value="Enviar">
+    </form> <!--encerra a tag de formulario-->
+
+</body>
+</html>
