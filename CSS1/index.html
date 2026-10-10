@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        p {
+            color: beige;
+        }
+    </style>
+    <!--Uso do style interno, nele voce pode decidir configuracoes de design que serao usados por toda a pagina SEM o uso de arquivos externos ou dentro da tag-->
+</head>
+
+<body>
+    <h1 style="color: rgb(244, 244, 244);">Aprendendo CSS</h1>
+    <!--Uso do Style inline, fica dentro das tags com h1, h2, h3, p e etc-->
+    <P>Este texto está estilizado! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta eos eaque officiis.
+        Labore quaerat dicta assumenda error impedit, odit ipsa. Accusantium ipsum animi explicabo sunt. Vel quisquam
+        voluptatum quae officiis.</P> <!--Fica verde por causa do uso do style interno-->
+   
+    <div style="background-color: beige; height: 130px;width: 290px; padding: 7px; border-radius: 10px; margin: 7px;">
+        <h2 style="margin: 10px;">Exemplo de Links</h2>
+            <ol style="color: black;">
+                <il><a href="https://www.google.com/?hl=pt_BR" target="_blank" class="link1">Link Padrão</a><br></il>
+                <il><a href="https://dinorunner.com/pt/" target="_blank" class="link2">Jogo do dinossauro</a></il>
+            </ol>
+    </div>
+   
+
+    
+        <h2 id="subtitulo">subtitulo id</h2>
+    <!--Uso do css externo, atraves do arquivo chamado style.css(neste caso) o é possivel atribuir configuracoes de desing predefinidas pelos desenvolvedores atraves de classes e ID's-->
+    <br>
+    <h2 class="aviso">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi porro a suscipit perspiciatis sit
+        minus in atque. Neque dolorem, non qui atque explicabo iure animi optio excepturi soluta iste temporibus.</h2>
+
+    <div class="caixa3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum omnis accusamus maiores veniam consequuntur
+            numquam quo vitae, dolore laborum unde nobis, ipsam tempora perspiciatis et iusto maxime, nam dolores
+            facere?</p>
+    </div>
+
+<br>
+<br>
+<br>
+    <div style="background-color: antiquewhite; height: 300px; width: 400px; margin: 10px; padding: 10px; border-radius: 10px; opacity: 67%; ">
+        <h1 style="color: black;">Tabela Estilizada</h1>
+
+        <table class="tabela">
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Cidade</th>
+            </tr>
+            <tr>
+                <td>Ana</td>
+                <td>25</td>
+                <td>Salvador</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>30</td>
+                <td>Recife</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>28</td>
+                <td>Fortaleza</td>
+            </tr>
+        </table>
+    </div>
+
+    
+<br>
+<br>
+
+    <div style="background-color: beige; height: 300px;width: 370px; padding: 7px; border-radius: 10px; margin: 7px;">
+        <h2>Exemplo de Listas</h2>
+
+        <ul class="lista1">
+            <li>Item com marcador quadrado</li>
+            <li>Outro item</li>
+        </ul>
+
+        <ol class="lista2">
+            <li>Primeiro item em algarismo romano</li>
+            <li>Segundo item</li>
+        </ol>
+
+        <ol class="lista3">
+            <li>Item com marcador de imagem</li>
+            <li>Mais um item</li>
+        </ol> 
+    </div>
+    
+    
+</body>
+
+</html>
