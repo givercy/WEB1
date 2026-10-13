@@ -1,0 +1,356 @@
+<!--
+1. Objetivo da Prática
+Consolidar os módulos de CSS criando uma página de catálogo de filmes.
+Aplicar cores, background, bordas, espaçamentos, tipografia, listas, tabelas e links em uma página única.
+Explorar diferentes unidades de medida e propriedades de display e visibilidade.
+Desenvolver boas práticas de organização de código e versionamento no GitHub.
+
+
+2. Tarefas obrigatórias
+
+
+A. Cabeçalho (header):
+
+Logo/título do catálogo e subtítulo.
+
+Background com background-color ou background-image (banner).
+
+h1 estilizado com cor RGB e text-shadow.
+
+h2 em itálico usando font-style.
+
+
+B. Seção “Destaque da Semana”:
+
+Card grande de 1 filme com poster, título (h3), sinopse, lista de gêneros (ul).
+
+Aplicar bordas, border-radius, padding e margin.
+
+
+C. Grade de Filmes (Catálogo):
+
+3 a 12 cards de filmes lado a lado usando display (inline-block ou flex).
+
+Cada card deve conter poster, título (link), ano e gênero(s).
+
+Fundo com background-color diferente do body.
+
+Borda sutil e border-radius.
+
+
+D. Tabela de Lançamentos/Prêmios:
+
+Tabela com 5–8 entradas (filme, ano, nota, status).
+
+Cabeçalhos destacados com background-color.
+
+Linhas alternadas usando nth-child(even).
+
+Aplicar border-collapse e padding em th/td.
+
+
+E. Listas & Navegação:
+
+Lista de gêneros estilizada com list-style-type.
+
+Menu de navegação simples (links âncora) para rolar até seções da página.
+
+
+F. Seção “Sobre/Contato”:
+
+Parágrafo com imagem pequena flutuando (float: right) e texto contornando.
+
+Links de redes sociais estilizados (hover/focus).-->
+
+<!--
+LEGENDA DE CSS
+- background-color: define a cor de fundo.
+- color: define a cor do texto.
+- font-family, font-size e font-style: definem a família, o tamanho e o estilo da fonte.
+- text-shadow: adiciona sombra ao texto.
+- width, height e max-width: controlam largura e altura dos elementos.
+- margin: cria espaço do lado de fora do elemento; padding cria espaço interno.
+- border e border-radius: desenham bordas e arredondam os cantos.
+- border-collapse: junta as bordas vizinhas de uma tabela.
+- display: define como o elemento é organizado; grid cria uma grade, flex organiza itens flexíveis e inline-block permite itens em linha com dimensões.
+- grid-template-columns: define as colunas de uma grade; gap define o espaço entre itens.
+- align-items e justify-content: alinham itens dentro de uma grade ou flex.
+- flex-direction e flex-wrap: definem a direção dos itens flexíveis e se eles podem quebrar para outra linha.
+- position: relative e top/left/right: deslocam visualmente um elemento em relação à posição normal.
+- object-fit: ajusta como uma imagem preenche sua caixa.
+- overflow: define o que acontece quando o conteúdo não cabe.
+- line-height: controla o espaço entre linhas; text-align alinha o texto.
+- text-decoration: controla decoração do texto, como sublinhado.
+- list-style-type: define o marcador de uma lista.
+- float: posiciona um elemento para que o texto possa contorná-lo; flow-root contém esse elemento flutuante.
+- opacity: controla a transparência.
+- scroll-behavior: define se a rolagem ocorre de forma suave ou imediata.
+- nth-child(even/odd): seleciona linhas pares/ímpares; :hover aplica estilo ao passar o mouse; :focus-visible aplica estilo ao navegar por teclado.
+- outline e outline-offset: desenham um contorno de foco e ajustam seu afastamento.
+- Os seletores com ponto (.) procuram classes; os seletores com # procuram IDs.
+-->
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo de filmes</title>
+    <style>
+        body{
+            background-color: rgb(67, 67, 68);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: white;
+            margin: 10px;
+            margin-bottom: 0;
+            height: auto;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+    <div style="background-color: rgb(32, 32, 32); border-radius: 10px; height: 50px;">
+        <img src="assets/cine-mais-logo.svg" alt="Logo do site: CINE MAIS" style="height: 90px;position:relative; top: -20px; left: 67px;">
+        <img src="assets/cine-mais-menu-icon.svg" alt="Icone de Menu" style="position: relative; height: 60px; right: 241px; top: -35px;">
+    </div>
+    
+    <br>
+    <br>
+
+    <h1 style="text-align: center;">Menu de Busca</h1>
+    <hr>
+
+    <div style="background-color: rgb(32, 32, 32);font-size: 18px;width:auto ;height: 100px;display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; padding: 20px; border-radius: 10px; align-items: center; text-align: center;">
+        
+        <a href="#DESTAQUE-DA-SEMANA">DESTAQUE DA SEMANA</a>
+        <a href="#EM-ALTA">EM ALTA</a>
+        <a href="#TABELA-DE-FILMES">TABELA DE FILMES</a>
+        <a href="#LISTA-DE-GENEROS">LISTA DE GENEROS</a>
+        <a href="#CONTATOS">CONTATOS</a>
+
+    </div>
+
+    <h1 id="DESTAQUE-DA-SEMANA" style="text-align: center;">Destaque da semana</h1>
+    <h2 id="teste"style="text-align:center">Spider-Man 2</h2>
+    <hr>
+
+    <div style="display: grid; grid-template-columns:repeat(3,1fr); background-color: rgb(16, 16, 16); padding: 20px; border-radius: 8px;">
+    
+        
+        <div style="width: 60%; height: auto; border-radius: 10px;">
+            <img style="width: 100%; height: 100%; object-fit: cover;" src="assets/Spider-Man_2_USA_poster.jpg" alt="Poster do filme">
+        </div>
+
+        <div style="position: relative;left: 15px;" id="teste">
+            <h2 style="position: relative;left: -180px;font-size: 40px;">Sinopse</h3>
+            
+            <p style="font-size: 21px;position: relative;top: -5px; left: -170px; line-height: 1.5;text-align: justify;" id="teste">
+                Em Homem-Aranha 2, após derrotar o Duende Verde, a vida de Peter Parker (Tobey Maguire) muda por completo. Temendo que Mary Jane (Kirsten Dunst) sofra algum risco por ser ele o Homem-Aranha, Peter continua escondendo o amor que sente e se mantém longe dela. Ao mesmo tempo precisa lidar com Harry (James Franco), seu melhor amigo, cuja raiva pelo Homem-Aranha aumenta cada vez mais por considerá-lo como sendo o assassino de seu pai. Além disso sua tia May (Rosemary Harris) passa por uma fase difícil após a morte de seu tio Ben, estranhando também o comportamento do sobrinho. Enquanto precisa lidar com seus problemas particulares Peter recebe ainda uma má notícia: o surgimento do Dr. Octopus (Alfred Molina), um homem que possui tentáculos presos ao corpo.
+            </p>
+        
+        </div>
+        
+        <div style="position: relative; left: 100px;" id="teste">
+            <h2 style="position: relative;font-size: 40px;">Generos</h3>
+            
+            <ul style="position: relative; left: -180px;top: -15px; line-height: 3.2; font-size: 20px;" id="teste">
+                <li>Ação</il>
+                <li>Aventura</il>
+                <li>Ficção</il>
+                <li>Científica</il>
+            </ul>
+        
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <h1 id="EM-ALTA">EM ALTA</h1>
+    <p id="mensagem-js"></p>
+    <hr>
+    <div style="display: grid; grid-template-columns:repeat(4,1fr);background-color: rgb(32, 32, 32); padding: 10px;">
+        
+        <div style="margin: 20px; padding: 30px; background-color: rgb(16, 16, 16); width: 267px;overflow: hidden; border-radius: 20px;">
+            <img src="assets/Spider-Man_Brand_New_Day_poster.jpg" alt="Imagem do poster do filme: Spider-Man: Brand New Day" style="width: 100%;height: 400px;object-fit:cover;">
+            <h3 id="teste">Spider-Man: Brand New Day</h3>
+             <ul style="font-size: 20px;" id="teste">
+                <li>Ação</il>
+                <li>Aventura</il>
+                <li>Ficção</il>
+                <li>Científica</il>
+            </ul>
+        </div>
+
+         <div style="margin: 20px; padding: 30px; background-color: rgb(16, 16, 16); width: 267px;overflow: hidden; border-radius: 20px;">
+            <img src="assets/ate o utlimo homen.jpg" alt="Imagem do poster do filme: Até o Ultimo Homem" style="width: 100%;height: 400px;object-fit:cover;">
+            <h3 id="teste">Até o ultimo Homem</h3>
+             <ul style="font-size: 20px;" id="teste">
+                <li>Biografia</il>
+                <li>Drama</il>
+                <li>História</il>
+                
+            </ul>
+        </div>
+
+         <div style="margin: 20px; padding: 30px; background-color: rgb(16, 16, 16); width: 267px;overflow: hidden; border-radius: 20px;">
+            <img src="assets/71zvuvzh4IL.webp" alt="Imagem do poster do filme: Forest Gump: O contador de historias" style="width: 100%;height: 400px;object-fit:cover;">
+            <h3 id="teste">Forest Gump: O Contador de historias</h3>
+             <ul style="font-size: 20px;" id="teste">
+                <li>Drama</il>
+                <li>Romance</il>
+                <li>Comédia</il>
+            </ul>
+        </div>
+
+         <div style="margin: 20px; padding: 30px; background-color: rgb(16, 16, 16); width: 267px;overflow: hidden; border-radius: 20px;">
+            <img src="assets/MPW-45583.webp" alt="Imagem do poster do filme: Carros" style="width: 100%;height: 400px;object-fit:cover;">
+            <h3 id="teste">Carros</h3>
+             <ul style="font-size: 20px;" id="teste">
+                <li>Animação</il>
+                <li>Aventura</il>
+                <li>Comédia</il>
+                
+            </ul>
+        </div>
+
+    </div>
+
+    <h1 id="TABELA-DE-FILMES" style="color: white;">Tabela De FIlmes</h1>
+    <hr>
+    <div style="background-color: rgb(32, 32, 32); height: auto; width: 1000px; margin: 10px; padding: 10px; border-radius: 10px; opacity: 77%; ">
+    
+        <table class="tabela" style="text-align: justify; display:flex; flex-direction: column; align-items: center;">
+
+            <tr>
+                <th style="border-top-left-radius: 10px;">Filme</th>
+                <th>Ano</th>
+                <th>Nota</th>
+                <th>Status</th>
+                <th style="border-top-right-radius: 10px;">Premios</th>
+            </tr>
+            <tr>
+                <td>Toy Story</td>
+                <td>1995</td>
+                <td>8.3/10r</td>
+                <td>Livre(L)</td>
+                <td>1 Óscar Especial (Achievement Award)</td>
+
+            </tr>
+            <tr>
+                <td>Homem-Aranha no Aranhaverso</td>
+                <td>2018</td>
+                <td>8.4/10</td>
+                <td>10 anos</td>
+                <td>1 Óscar de Melhor Filme de Animação</td>
+            </tr>
+            <tr>
+                <td>Vingadores: Ultimato</td>
+                <td>2019</td>
+                <td>8.4/10</td>
+                <td>12 anos</td>
+                <td>Vencedor de vários Saturn Awards e indicações ao Óscar</td>
+            <tr>
+                <td>O Senhor dos Anéis: A Sociedade do Anel</td>
+                <td>2001</td>
+                <td>8.8/10</td>
+                <td>14 anos</td>
+                <td>Vencedor de 4 Óscares</td>
+            </tr>
+            <tr>
+                <td style="border-bottom-left-radius: 10px;">O Exterminador do Futuro 2: O Julgamento Final</td>
+                <td>1991</td>
+                <td>8.6/10</td>
+                <td>16 anos</td>
+                <td style="border-bottom-right-radius: 10px;">Vencedor de 4 Óscares (Efeitos Visuais, Som, etc.)</td>
+            </tr>
+
+        </table>
+
+        
+    </div>
+
+    <h1 id="LISTA-DE-GENEROS">Lista de Generos</h1> 
+    <hr>
+    <div style="background-color: rgb(32, 32, 32); margin-top: 10px; border-radius: 10px;">    
+      
+            <ul style="list-style-type: square;display: flex; gap: 30px;flex-wrap: wrap;padding: 20px;margin: 10px; font-size: 22px;">
+                <li>Ação</li>
+                <li>Aventura</li>
+                <li>Animação</li>
+                <li>Comédia</li>
+                <li>Comédia Dramática</li>
+                <li>Comédia Romântica</li>
+                <li>Crime</li>
+                <li>Documentário</li>
+                <li>Drama</li>
+                <li>Fantasia</li>
+                <li>Faroeste (Western)</li>
+                <li>Ficção Científica</li>
+                <li>Guerra</li>
+                <li>Histórico</li>
+                <li>Mistério</li>
+                <li>Musical</li>
+                <li>Policial</li>
+                <li>Romance</li>
+                <li>Suspense (Thriller)</li>
+                <li>Terror</li>
+                <li>Biografia</li>
+                <li>Família</li>
+                <li>Esporte</li>
+                <li>Super-herói</li>
+                <li>Noir</li>
+            </ul>
+    </div>  
+
+    <div style="height: 50px;"></div>
+    <h1>Sobre</h1>
+    <hr>
+
+     <div style="background-color: rgb(16, 16, 16); height: auto; margin: 10px; padding: 10px; border-radius: 10px; ">
+        <div style="max-width: 850px; margin: 20px auto; padding: 20px; background-color: rgb(32, 32, 32); border-radius: 10px;">
+        <p style="display: flow-root; margin: 0; line-height: 1.6; text-align: justify; font-size: 22px;">
+            <img src="assets/elementos-de-cinema_23-2148133574.webp" alt="Pôster de Até o Último Homem"
+                style="float: right; width: 100px; height: auto; margin: 0 0 10px 15px; height: 250px; width: auto;">
+
+            O Cine Mais é um catálogo feito para quem gosta de cinema e quer descobrir o que assistir.
+            Aqui você encontra filmes em destaque e em alta, além de informações sobre gêneros, anos 
+            de lançamento, avaliações, classificações e prêmios. Explore as categorias, conheça novas 
+            histórias e encontre seu próximo filme favorito.
+        </p>
+        
+        </div>
+    </div>
+
+    <div style="height: 130px;"></div>
+
+    <div style="background-color: rgb(32, 32, 32);width: auto; height: 300px;">
+        <h1 id="CONTATOS" style="font-size: 40px; padding: 20px;margin: 20px;position: relative; top: 1px;">Contatos:</h1>
+        <div style="color: turquoise;font-family: 'Courier New', Courier, monospace ;display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; padding: 20px; border-radius: 10px; align-items: center; text-align: center; position: relative; top: 35px;">
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <img style="width: auto;height: 50px;" src="assets/instagram.png" alt="Logo do instagram"><a class="rede_social" href="https://www.instagram.com/hgivercy/" target="_blank" style="font-size: 22px ;margin: 10px;">Intagram: hgivercy</a> 
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <img style="width: auto;height: 50px;" src="assets/gmail.png" alt="Logo Gmail"><a class="rede_social" href="https://mail.google.com/mail/?view=cm&fs=1&to=givercy.dev@gmail.com&su=Contato%20pelo%20Cine%20Mais" target="_blank"  style="font-size: 22px ;margin: 10px;">givercy.dev@gmail.com</a>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <img style="width: auto;height: 50px;" src="assets/github (1).png" alt="Logo Gitibuh"><a class="rede_social" href ="https://github.com/givercy" target="_blank" style="font-size: 22px;margin: 10px;">GitHub: Givercy</a> 
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <img style="width: auto;height: 50px;" src="assets/linkedin.png" alt="Logo linkedin"><a class="rede_social" href ="https://www.linkedin.com/in/givercy-undefined-825941428?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" style="font-size: 22px ;margin: 10px;">linkedin: Heitor Givercy</a> 
+            </div>
+            </div>       
+        </div>
+    </div>
+
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
