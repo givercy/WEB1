@@ -93,7 +93,7 @@ function mostrarFilmes(lista) {
   for (const filme of lista) {
     // O selo aparece quando a nota é 8 ou mais.
     const selo = filme.nota >= 8
-      ? '<p class="selo-recomendado">⭐ Recomendado</p>'
+      ? '<p class="selo-recomendado">* Recomendado</p>'
       : "";
 
     // Usa o índice do array principal para o botão de favoritos.
@@ -111,7 +111,7 @@ function mostrarFilmes(lista) {
         '<p>' + filme.ano + ' · ' + filme.genero + '</p>' +
         '<p>Nota: ' + filme.nota + '/10</p>' +
         selo +
-        '<button class="botao-favorito" type="button" onclick="favoritar(' + indice + ')">♥ Favoritar</button>' +
+        '<button class="botao-favorito" type="button" onclick="favoritar(' + indice + ')"><3 Favoritar</button>' +
       '</div>';
   }
 }
