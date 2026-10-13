@@ -45,35 +45,35 @@ let filmes = [
     ano: 1995,
     genero: "Animação",
     nota: 8.3,
-    poster: ""
+    poster: "assets/95325b49e6e47899e6f9f5f012bf2623.webp"
   },
   {
     titulo: "Homem-Aranha no Aranhaverso",
     ano: 2018,
     genero: "Animação",
     nota: 8.4,
-    poster: ""
+    poster: "assets/poster-homem-aranha-no-aranhaverso-a-f052f158.webp"
   },
   {
     titulo: "Vingadores: Ultimato",
     ano: 2019,
     genero: "Ação, Aventura",
     nota: 8.4,
-    poster: ""
+    poster: "assets/MoviePoster-c80cc47e-1e14-4419-bf3a-81f9f4959edb.webp"
   },
   {
     titulo: "O Senhor dos Anéis: A Sociedade do Anel",
     ano: 2001,
     genero: "Aventura, Fantasia",
     nota: 8.8,
-    poster: ""
+    poster: "assets/a8be15c0696b8658395be5d92dd0753c.webp"
   },
   {
     titulo: "O Exterminador do Futuro 2: O Julgamento Final",
     ano: 1991,
     genero: "Ação, Ficção Científica",
     nota: 8.6,
-    poster: ""
+    poster: "assets/20190906-poster-209x300.webp"
   }
 ];
 
