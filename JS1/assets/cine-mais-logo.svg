@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" role="img" aria-labelledby="title desc">
+  <title id="title">CINE MAIS</title>
+  <desc id="desc">Logo minimalista CINE MAIS com óculos de cinema 3D, uma lente vermelha e outra azul.</desc>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <rect x="106" y="130" width="86" height="100" rx="18" fill="#E53945" fill-opacity="0.12" stroke="#E53945" stroke-width="13"/>
+    <rect x="206" y="130" width="86" height="100" rx="18" fill="#2479D8" fill-opacity="0.12" stroke="#2479D8" stroke-width="13"/>
+    <path d="M192 158 H206" fill="none" stroke="#202124" stroke-width="10"/>
+    <path d="M106 157 H80" fill="none" stroke="#E53945" stroke-width="13"/>
+    <path d="M292 157 H318" fill="none" stroke="#2479D8" stroke-width="13"/>
+  </g>
+  <text x="365" y="218" font-family="Montserrat, Avenir Next, Arial, sans-serif" font-size="102" font-weight="750" letter-spacing="4" fill="#FFFFFF">CINE</text>
+  <text x="665" y="218" font-family="Montserrat, Avenir Next, Arial, sans-serif" font-size="102" font-weight="700" letter-spacing="4" fill="#2479D8">MAIS</text>
+</svg>
+
